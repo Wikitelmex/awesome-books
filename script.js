@@ -1,4 +1,4 @@
-var books = [];
+let books = [];
 let index = 0;
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
@@ -17,6 +17,10 @@ function AddBook() {
   author.value = '';
 
   console.log(books);
+}
+
+function SaveLocalStorage() {
+  localStorage.setItem('AmazingBooks', JSON.stringify(books));
 }
 
 function AddRowBooks(titleB, authorB, idIndex) {
@@ -50,33 +54,27 @@ function RemoveRowBooks(idIndex) {
   SaveLocalStorage();
 }
 
-function SaveLocalStorage() {
-  localStorage.setItem("AmazingBooks", JSON.stringify(books));
-}
-
 function ReadLocalStorage() {
-  let temp = JSON.parse(localStorage.getItem("AmazingBooks"));
-  
+  const temp = JSON.parse(localStorage.getItem('AmazingBooks'));
+
   console.log(temp);
-  
-  
-  if(temp!==null){
+
+  if (temp !== null) {
     books = temp;
   }
   console.log(books);
-  
 }
 
 function AddAllRowBooks() {
-  if (books===null) {
+  if (books === null) {
     return null;
   }
-  books.forEach( e => {
-    AddRowBooks(e.title,e.author,e.index);
+  books.forEach((e) => {
+    AddRowBooks(e.title, e.author, e.index);
   });
 }
 
 window.onload = function load() {
   ReadLocalStorage();
   AddAllRowBooks();
-}
+};
