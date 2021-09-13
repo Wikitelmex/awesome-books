@@ -1,4 +1,4 @@
-const books = [];
+var books = [];
 let index = 0;
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
@@ -47,6 +47,7 @@ function RemoveRowBooks(idIndex) {
   books.splice(books.findIndex(isIndex), 1);
   console.log(books);
   booksTable.removeChild(tr);
+  SaveLocalStorage();
 }
 
 function SaveLocalStorage() {
@@ -54,9 +55,16 @@ function SaveLocalStorage() {
 }
 
 function ReadLocalStorage() {
-  if(localStorage.getItem("AmazingBooks")!==null){
-    books.concat = JSON.parse(localStorage.getItem("AmazingBooks"));
+  let temp = JSON.parse(localStorage.getItem("AmazingBooks"));
+  
+  console.log(temp);
+  
+  
+  if(temp!==null){
+    books = temp;
   }
+  console.log(books);
+  
 }
 
 function AddAllRowBooks() {
