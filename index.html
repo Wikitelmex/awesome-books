@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Awesome books</h1>
+
+    <!--content generated with js TABLE-->
+    <table name="booksTable" id="booksTable">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+
+    <!--Form to add book-->
+    <form name="saveBook" id="saveBook">
+        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="author" name="title" id="author" placeholder="Author">
+        <button type="button" onclick="AddBook()" id="add">Add</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
