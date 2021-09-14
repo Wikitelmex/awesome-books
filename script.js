@@ -19,7 +19,7 @@ function AddRowBooks(titleB, authorB, idIndex) {
   const td3 = document.createElement('td');
   const button = document.createElement('button');
   button.innerText = 'Remove';
-  button.setAttribute('onclick', `RemoveRowBooks("${idIndex}")`);
+  button.setAttribute('onclick', `RemoveRowBooks('${idIndex}')`);
   td3.appendChild(button);
 
   tr.appendChild(td1);
