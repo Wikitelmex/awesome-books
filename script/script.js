@@ -44,6 +44,7 @@ function AddRowBooks(titleB, authorB, idIndex) {
   SaveLocalStorage();
 }
 
+//array class
 function CreateGuid() {
   function p8(s) {
     const p = (`${Math.random().toString(10)}000000000`).substr(2, 8);
