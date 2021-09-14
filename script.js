@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 let books = [];
-let index = 0;
+const index = 0;
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const booksTable = document.querySelector('#booksTable');
@@ -30,14 +30,24 @@ function AddRowBooks(titleB, authorB, idIndex) {
   SaveLocalStorage();
 }
 
+function CreateGuid() {
+  function p8(s) {
+    const p = (`${Math.random().toString(10)}000000000`).substr(2, 8);
+    return s ? +p.substr(0, 4) + p.substr(4, 4) : p;
+  }
+  return p8() + p8(true);
+}
+
 function AddBook() {
+  const guindex = CreateGuid();
+
   books.push({
-    index,
+    index: guindex,
     title: title.value,
     author: author.value,
   });
 
-  AddRowBooks(title.value, author.value, index += 1);
+  AddRowBooks(title.value, author.value, guindex);
 
   title.value = '';
   author.value = '';

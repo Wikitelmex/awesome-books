@@ -7,7 +7,7 @@ This is a simple book list in which user can input and add desired book name and
 
 ## Built With
 
- HTML5
+- HTML5
 
 - CSS
 
@@ -18,25 +18,24 @@ This is a simple book list in which user can input and add desired book name and
 - Git & Github
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://wikitelmex.github.io/awesome-books/)
 
 
 ## Getting Started
 
 * Open terminal
-* Clone this project by command git clone https://git@github.com:peterdgreat/awesome-books.git
-* Cd conference-event folder
+* Clone this project by command: git clone https://git@github.com:peterdgreat/awesome-books.git
+* Cd awesome-books folder
 * Open index.html in the browser (you can use Live Server in Visual Studio Code)
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Alex**
 - GitHub: [@githubhandle](https://github.com/wikitelmex)
 
 
-👤 **Author2**
-
+👤 **Peter**
 - GitHub: [@githubhandle](https://github.com/peterdgreat)
 - Twitter: [@twitterhandle](https://twitter.com/dev_Peter_O)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ajayi-peter-4391ab1b5)
@@ -46,17 +45,11 @@ This is a simple book list in which user can input and add desired book name and
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Wikitelmex/awesome-books/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
