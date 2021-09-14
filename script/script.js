@@ -1,15 +1,28 @@
-/* eslint-disable no-unused-vars */
+/* strict mode on to avoid mistypes, and using of reserved words */
 "use strict";
+
+/* Imports classes from files */
+/*
+import { thing1 } from './array';
+import { thing2 } from './domtable';
+import { thing3 } from './localstorageactions';
+*/
+
+/* Variables declaration */
 let books = [];
 const index = 0;
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const booksTable = document.querySelector('#booksTable');
 
+/* Code to refactoring */
+
+//localstorage class
 function SaveLocalStorage() {
   localStorage.setItem('AmazingBooks', JSON.stringify(books));
 }
 
+//domtable class
 function AddRowBooks(titleB, authorB, idIndex) {
   const tr = document.createElement('tr');
   tr.setAttribute('id', `id${idIndex}`);
@@ -39,6 +52,7 @@ function CreateGuid() {
   return p8() + p8(true);
 }
 
+//array class
 function AddBook() {
   const guindex = CreateGuid();
 
@@ -54,6 +68,7 @@ function AddBook() {
   author.value = '';
 }
 
+//domtable class
 function RemoveRowBooks(idIndex) {
   const tr = document.querySelector(`#id${idIndex}`);
   const isIndex = (element) => element.index === idIndex.toString();
@@ -69,6 +84,7 @@ function RemoveRowBooks(idIndex) {
   SaveLocalStorage();
 }
 
+//localstorage class
 function ReadLocalStorage() {
   const temp = JSON.parse(localStorage.getItem('AmazingBooks'));
 
@@ -77,6 +93,7 @@ function ReadLocalStorage() {
   }
 }
 
+//domtable class
 function AddAllRowBooks() {
   if (books === null) {
     return null;
