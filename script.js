@@ -1,23 +1,9 @@
+/* eslint-disable no-unused-vars */
 let books = [];
 let index = 0;
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
 const booksTable = document.querySelector('#booksTable');
-
-function AddBook() {
-  books.push({
-    index,
-    title: title.value,
-    author: author.value,
-  });
-
-  AddRowBooks(title.value, author.value, index++);
-
-  title.value = '';
-  author.value = '';
-
-  console.log(books);
-}
 
 function SaveLocalStorage() {
   localStorage.setItem('AmazingBooks', JSON.stringify(books));
@@ -44,12 +30,24 @@ function AddRowBooks(titleB, authorB, idIndex) {
   SaveLocalStorage();
 }
 
+function AddBook() {
+  books.push({
+    index,
+    title: title.value,
+    author: author.value,
+  });
+
+  AddRowBooks(title.value, author.value, index += 1);
+
+  title.value = '';
+  author.value = '';
+}
+
 function RemoveRowBooks(idIndex) {
   const tr = document.querySelector(`#id${idIndex}`);
   const isIndex = (element) => element.index === idIndex;
 
   books.splice(books.findIndex(isIndex), 1);
-  console.log(books);
   booksTable.removeChild(tr);
   SaveLocalStorage();
 }
@@ -57,12 +55,9 @@ function RemoveRowBooks(idIndex) {
 function ReadLocalStorage() {
   const temp = JSON.parse(localStorage.getItem('AmazingBooks'));
 
-  console.log(temp);
-
   if (temp !== null) {
     books = temp;
   }
-  console.log(books);
 }
 
 function AddAllRowBooks() {
