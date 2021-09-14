@@ -3,9 +3,9 @@
 
 /* Imports classes from files */
 /*
-import { thing1 } from './array';
-import { thing2 } from './domtable';
-import { thing3 } from './localstorageactions';
+import { class1 } from './array';
+import { class2 } from './domtable';
+import { class3 } from './localstorageactions';
 */
 
 /* Variables declaration */
