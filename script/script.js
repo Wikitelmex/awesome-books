@@ -8,7 +8,7 @@ import { class2 } from './domtable';
 import { class3 } from './localstorageactions';
 */
 
-/* Variables declaration */
+/* Variables declaration put inside respective class */
 let books = [];
 const index = 0;
 const title = document.querySelector('#title');
