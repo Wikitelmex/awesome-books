@@ -19,7 +19,7 @@ function AddRowBooks(titleB, authorB, idIndex) {
   const td3 = document.createElement('td');
   const button = document.createElement('button');
   button.innerText = 'Remove';
-  button.setAttribute('onclick', `RemoveRowBooks(${idIndex})`);
+  button.setAttribute('onclick', `RemoveRowBooks("${idIndex}")`);
   td3.appendChild(button);
 
   tr.appendChild(td1);
@@ -56,8 +56,13 @@ function AddBook() {
 function RemoveRowBooks(idIndex) {
   const tr = document.querySelector(`#id${idIndex}`);
   const isIndex = (element) => element.index === idIndex.toString();
+  const myIndex =books.findIndex(isIndex);
 
-  books.splice(books.findIndex(isIndex), 1);
+  if (myIndex === -1) {
+    alert("index mismatch");
+    return 0;
+  }
+  books.splice(myIndex, 1);
   booksTable.removeChild(tr);
   SaveLocalStorage();
 }
