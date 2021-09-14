@@ -55,7 +55,7 @@ function AddBook() {
 
 function RemoveRowBooks(idIndex) {
   const tr = document.querySelector(`#id${idIndex}`);
-  const isIndex = (element) => element.index === idIndex;
+  const isIndex = (element) => element.index === idIndex.toString();
 
   books.splice(books.findIndex(isIndex), 1);
   booksTable.removeChild(tr);
