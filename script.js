@@ -56,10 +56,11 @@ function AddBook() {
 function RemoveRowBooks(idIndex) {
   const tr = document.querySelector(`#id${idIndex}`);
   const isIndex = (element) => element.index === idIndex.toString();
-  const myIndex =books.findIndex(isIndex);
+  const myIndex = books.findIndex(isIndex);
 
   if (myIndex === -1) {
-    alert("index mismatch");
+    // must change alert for an validation
+    alert('index mismatch');
     return 0;
   }
   books.splice(myIndex, 1);
