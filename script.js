@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+"use strict";
 let books = [];
 const index = 0;
 const title = document.querySelector('#title');
