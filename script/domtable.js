@@ -7,7 +7,9 @@ class DomTable {
     const tr = document.createElement('tr');
     tr.setAttribute('id', `id${idIndex}`);
     const td1 = document.createElement('td');
-    td1.innerText = titleB;
+    td1.innerText = `"${titleB}"`;
+    const td4 = document.createElement('td');
+    td4.innerText = 'by';
     const td2 = document.createElement('td');
     td2.innerText = authorB;
     const td3 = document.createElement('td');
@@ -17,6 +19,7 @@ class DomTable {
     td3.appendChild(button);
   
     tr.appendChild(td1);
+    tr.appendChild(td4);
     tr.appendChild(td2);
     tr.appendChild(td3);
   
