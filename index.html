@@ -6,6 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="./style.css">
+
+        <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            td, th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+            }
+
+            tr:nth-child(even) {
+            background-color: #dddddd;
+            }
+            button {
+                box-shadow: 5px 5px;
+            }
+        </style>
     </head>
     <body>
         <h1>Awesome books</h1>
@@ -28,9 +49,13 @@
             <input type="text" name="title" id="title" >
             <label for="author">author</label>
             <input type="text" name="title" id="author" >
-            <button type="button" onclick="AddBook()" id="add">Add</button>
+            <button type="button" onclick="AddBookM()" id="add">Add</button>
         </form>
 
+        <script src="./script/array.js"></script>
+        <script src="./script/localstorageactions.js"></script>
+        <script src="./script/domtable.js"></script>
         <script src="./script/script.js"></script>
+        
     </body>
 </html>
