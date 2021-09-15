@@ -2,7 +2,6 @@
 const booksAr = new BooksArray();
 const domTb = new DomTable();
 const localSt = new BooksStorage();
-/* eslint-enable */
 
 function RemoveBooks(idIndex) {
   booksAr.DeleteBook(idIndex);
@@ -15,10 +14,9 @@ function AddBookM() {
   domTb.AddRowBooks(s.title, s.author, s.index);
   localSt.SaveLocalStorage(booksAr.ReadAllBooks());
 }
+/* eslint-enable */
 
 window.onload = function load() {
   booksAr.LoadBooks(localSt.ReadLocalStorage());
   domTb.AddAllRowBooks(booksAr.ReadAllBooks());
 };
-
-module.exports(RemoveBooks, AddBookM);
