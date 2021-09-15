@@ -12,10 +12,10 @@
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 100%;
+            border: 2px solid black;
             }
 
             td, th {
-            border: 1px solid black;
             text-align: left;
             padding: 8px;
             }
@@ -26,9 +26,38 @@
             button {
                 box-shadow: 5px 5px;
             }
+
+            h1, h2 {
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin: 0 auto;
+               
+            }
+
+            .btn {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 2px;
+            }
+
+            input {
+                border: 2px solid black;
+                margin-top: 5px;
+                height: 1.2rem;
+            }
+
+            section {
+                margin-top: 5px;
+            }
         </style>
     </head>
     <body>
+
         <h1>Awesome books</h1>
 
         <!--content generated with js TABLE-->
@@ -42,16 +71,22 @@
 
 
         <!--Form to add book-->
+        <section>
+            <h2>Add a book</h2>
+        
         <form name="saveBook" id="saveBook">
             <label for="title">
-        title
+        
             </label>
-            <input type="text" name="title" id="title" >
-            <label for="author">author</label>
-            <input type="text" name="title" id="author" >
-            <button type="button" onclick="AddBookM()" id="add">Add</button>
+            <input type="text" name="title" id="title" placeholder="title" >
+            <label for="author"></label>
+            <input type="text" name="title" id="author" placeholder="author" >
+            <div class="btn">
+                <button type="button" onclick="AddBookM()" id="add">Add</button>
+            </div>
+           
         </form>
-
+    </section>
         <script src="./script/array.js"></script>
         <script src="./script/localstorageactions.js"></script>
         <script src="./script/domtable.js"></script>
