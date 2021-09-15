@@ -4,10 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./style.css">
-
-
+        <title>Awesome Books</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
@@ -21,21 +19,23 @@
 
         <!--Form to add book-->
         <section>
+
             <h2>Add a book</h2>
-        
-        <form name="saveBook" id="saveBook">
-            <label for="title">
-        
-            </label>
-            <input type="text" name="title" id="title" placeholder="title" >
-            <label for="author"></label>
-            <input type="text" name="title" id="author" placeholder="author" >
-            <div class="btn">
-                <button type="button" onclick="AddBookM()" id="add">Add</button>
-            </div>
-           
-        </form>
-    </section>
+            
+            <form name="saveBook" id="saveBook">
+                <label for="title"></label>
+                <input type="text" name="title" id="title" placeholder="title" >
+                <label for="author"></label>
+                <input type="text" name="title" id="author" placeholder="author" >
+
+                <div class="btn">
+                    <button type="button" onclick="AddBookM()" id="add">Add</button>
+                </div>
+            
+            </form>
+
+        </section>
+
         <script src="./script/array.js"></script>
         <script src="./script/localstorageactions.js"></script>
         <script src="./script/domtable.js"></script>
