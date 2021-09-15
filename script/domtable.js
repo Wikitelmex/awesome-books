@@ -1,6 +1,9 @@
+/* eslint-disable */
 class DomTable {
   #title = document.querySelector('#title');
+
   #author = document.querySelector('#author');
+
   #booksTable = document.querySelector('#booksTable');
 
   AddRowBooks(titleB, authorB, idIndex) {
@@ -17,12 +20,12 @@ class DomTable {
     button.innerText = 'Remove';
     button.setAttribute('onclick', `RemoveBooks('${idIndex}')`);
     td3.appendChild(button);
-  
+
     tr.appendChild(td1);
     tr.appendChild(td4);
     tr.appendChild(td2);
     tr.appendChild(td3);
-  
+
     this.#booksTable.appendChild(tr);
     this.#title.value = '';
     this.#author.value = '';
@@ -40,6 +43,7 @@ class DomTable {
     array1.forEach((e) => {
       this.AddRowBooks(e.title, e.author, e.index);
     });
+    return true;
   }
 
   ReadTitle() {
