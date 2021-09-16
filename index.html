@@ -13,19 +13,43 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
 
-        <h2>All awesome books</h2>
-        <!--content generated with js TABLE-->
-        <table class="table border" id="booksTable">
-           
-        </table>
+    <body>
+        <!--navbar fixed top-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Awesome Books</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a onclick="Show('list')" id="listLink" class="nav-link active" aria-current="page" href="#">List</a>
+                        <a onclick="Show('add')" id="addLink" class="nav-link" href="#">Add new</a>
+                        <a onclick="Show('contact')" id="contactLink" class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--List of books-->
+        <div id="listPage" class="d-block">
+            <br>
+            <br>
+            <h2>All awesome books</h2>
+            <!--content generated with js TABLE-->
+            <table class="table border" id="booksTable">
+               
+            </table>
+        </div>
+
+
 
         <hr>
 
         <!--Form to add book-->
-        <section>
-
+        <div id="addPage" class="d-none">
+            <br>
             <h2>Add a book</h2>
             
             <form name="saveBook" id="saveBook">
@@ -40,12 +64,26 @@
             
             </form>
 
-        </section>
+        </div>
+
+        <!--Contact div-->
+        <div id="contactPage" class="d-none">
+            <br>
+            <h2>Contact information</h2>
+            <p>Do have any questions or ou just want to say "Hello"?</p>
+            <ul>
+                <li>Our e-mail: wikitelmex@gmail.com</li>
+                <li>Our phone number: 625 584 5675</li>
+                <li>Our address: Streetname 22, 84503 City, Country</li>
+            </ul>
+        </div>
 
         <script src="./script/array.js"></script>
         <script src="./script/localstorageactions.js"></script>
         <script src="./script/domtable.js"></script>
         <script src="./script/script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         
     </body>
 </html>
