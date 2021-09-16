@@ -2,8 +2,9 @@ body {
   font-family: 'Roboto', sans-serif;
   padding: 20px;
 }
+
 button {
-  box-shadow: 6px 6px 11px 0px rgba(0,0,0,0.61);
+  box-shadow: 6px 6px 11px 0 rgba(0, 0, 0, 0.61);
 }
 
 tr:nth-child(even) {
