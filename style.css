@@ -1,26 +1,14 @@
-html {
-  padding: 0;
-}
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  border: 2px solid black;
-}
-
-td,
-th {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #ddd;
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
 }
 
 button {
-  box-shadow: 5px 5px;
+  box-shadow: 6px 6px 11px 0 rgba(0, 0, 0, 0.61);
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
 }
 
 h1,
@@ -41,12 +29,6 @@ form {
   margin-top: 2px;
 }
 
-input {
-  border: 2px solid black;
-  margin-top: 5px;
-  height: 1.2rem;
-}
-
-section {
-  margin-top: 5px;
+hr {
+  max-width: 300px;
 }

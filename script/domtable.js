@@ -7,6 +7,7 @@ class DomTable {
   #booksTable = document.querySelector('#booksTable');
 
   AddRowBooks(titleB, authorB, idIndex) {
+    
     const tr = document.createElement('tr');
     tr.setAttribute('id', `id${idIndex}`);
     const td1 = document.createElement('td');
@@ -18,6 +19,7 @@ class DomTable {
     const td3 = document.createElement('td');
     const button = document.createElement('button');
     button.innerText = 'Remove';
+    button.setAttribute('class','btn btn-warning')
     button.setAttribute('onclick', `RemoveBooks('${idIndex}')`);
     td3.appendChild(button);
 
