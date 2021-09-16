@@ -37,7 +37,7 @@ class DomTable {
   }
 
   AddAllRowBooks(array1) {
-    if (array1 === null) {
+    if (array1 === null || !array1) {
       return null;
     }
     array1.forEach((e) => {

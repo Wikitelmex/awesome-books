@@ -8,7 +8,8 @@ function CreateGuid() {
 }
 
 class BooksArray {
-  #books = []; // private encapsulation
+  
+  #books = new Array();
 
   AddBook(addTitle, addAuthor) {
     const guindex = CreateGuid();
@@ -51,7 +52,7 @@ class BooksArray {
   }
 
   LoadBooks(localBooks) {
-    if (localBooks !== null) {
+    if (Array.isArray(localBooks)) {
       this.#books = localBooks;
     }
   }
