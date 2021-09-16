@@ -3,6 +3,10 @@ body {
   padding: 20px;
 }
 
+.text-end {
+  text-align: end;
+}
+
 button {
   box-shadow: 6px 6px 11px 0 rgba(0, 0, 0, 0.61);
 }

@@ -3,6 +3,8 @@ const booksAr = new BooksArray();
 const domTb = new DomTable();
 const localSt = new BooksStorage();
 const form1 = document.querySelector('#saveBook');
+const myDate = document.querySelector('#myDate');
+const dt = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_MED);
 
 function RemoveBooks(idIndex) {
   booksAr.DeleteBook(idIndex);
@@ -52,4 +54,5 @@ function Show(name) {
 window.onload = function load() {
   booksAr.LoadBooks(localSt.ReadLocalStorage());
   domTb.AddAllRowBooks(booksAr.ReadAllBooks());
+  myDate.innerText = dt;
 };

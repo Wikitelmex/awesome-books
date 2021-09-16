@@ -24,18 +24,19 @@
                 </button>
                 <div class="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a onclick="Show('list')" id="listLink" class="nav-link active" aria-current="page" href="#">List</a>
-                        <a onclick="Show('add')" id="addLink" class="nav-link" href="#">Add new</a>
-                        <a onclick="Show('contact')" id="contactLink" class="nav-link" href="#">Contact</a>
+                        <a onclick="Show('list')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="listLink" class="nav-link active" aria-current="page" href="#">List</a>
+                        <a onclick="Show('add')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="addLink" class="nav-link" href="#">Add new</a>
+                        <a onclick="Show('contact')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="contactLink" class="nav-link" href="#">Contact</a>
                     </div>
                 </div>
             </div>
         </nav>
 
+        <!--Datetime-->
+        <br><br><p class="text-end" id="myDate"></p>
+
         <!--List of books-->
         <div id="listPage" class="d-block">
-            <br>
-            <br>
             <h2>All awesome books</h2>
             <!--content generated with js TABLE-->
             <table class="table border" id="booksTable">
@@ -43,13 +44,8 @@
             </table>
         </div>
 
-
-
-        <hr>
-
         <!--Form to add book-->
         <div id="addPage" class="d-none">
-            <br>
             <h2>Add a book</h2>
             
             <form name="saveBook" id="saveBook">
@@ -68,7 +64,6 @@
 
         <!--Contact div-->
         <div id="contactPage" class="d-none">
-            <br>
             <h2>Contact information</h2>
             <p>Do have any questions or ou just want to say "Hello"?</p>
             <ul>
@@ -78,9 +73,12 @@
             </ul>
         </div>
 
+        <hr>
+        
         <script src="./script/array.js"></script>
         <script src="./script/localstorageactions.js"></script>
         <script src="./script/domtable.js"></script>
+        <script src="./script/luxon.js"></script>
         <script src="./script/script.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
