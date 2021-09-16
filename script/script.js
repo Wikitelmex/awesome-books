@@ -2,6 +2,7 @@
 const booksAr = new BooksArray();
 const domTb = new DomTable();
 const localSt = new BooksStorage();
+const form1 = document.querySelector('#saveBook');
 
 function RemoveBooks(idIndex) {
   booksAr.DeleteBook(idIndex);
