@@ -3,6 +3,15 @@ body {
   padding: 20px;
 }
 
+.text-end {
+  text-align: end;
+}
+
+.contactM {
+  max-width: 49vh;
+  margin: auto;
+}
+
 button {
   box-shadow: 6px 6px 11px 0 rgba(0, 0, 0, 0.61);
 }
@@ -31,4 +40,14 @@ form {
 
 hr {
   max-width: 300px;
+}
+
+.hide-mobile {
+  display: none !important;
+}
+
+@media screen and (min-width: 992px) {
+  .hide-mobile {
+    display: block !important;
+  }
 }
