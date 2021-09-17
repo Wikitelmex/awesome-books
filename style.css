@@ -41,3 +41,13 @@ form {
 hr {
   max-width: 300px;
 }
+
+.hide-mobile {
+  display: none !important;
+}
+
+@media screen and (min-width: 992px) {
+  .hide-mobile {
+    display: block !important;
+  }
+}
