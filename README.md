@@ -1,7 +1,6 @@
 
-# Project Name
+# Awesome Books.
 
-> Awesome Books.
 
 This is a simple book list in which user can input and add desired book name and author, this also allow user to remove and a feature that prserve data on page load.
 

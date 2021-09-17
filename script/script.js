@@ -12,7 +12,8 @@ function RemoveBooks(idIndex) {
   localSt.SaveLocalStorage(booksAr.ReadAllBooks());
 }
 
-function AddBookM() {
+function AddBookM(e) {
+  e.preventDefault();
   const s = booksAr.AddBook(domTb.ReadTitle(), domTb.ReadAuthor());
   domTb.AddRowBooks(s.title, s.author, s.index);
   localSt.SaveLocalStorage(booksAr.ReadAllBooks());
@@ -44,7 +45,7 @@ function Show(name) {
       break;
     case 'contact':
       contactLink.setAttribute('class','nav-link active')
-      contactPage.setAttribute('class','d-block');
+      contactPage.setAttribute('class','contactM d-block');
       break;
 
   }

@@ -9,72 +9,92 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <!--navbar fixed top-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Awesome Books</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        <a onclick="Show('list')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="listLink" class="nav-link active" aria-current="page" href="#">List</a>
-                        <a onclick="Show('add')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="addLink" class="nav-link" href="#">Add new</a>
-                        <a onclick="Show('contact')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="contactLink" class="nav-link" href="#">Contact</a>
+        <header>
+            
+            <!-- #region navbar fixed top -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Awesome Books</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <a onclick="Show('list')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="listLink" class="nav-link active" aria-current="page" href="#">List</a>
+                            <a class="nav-link">|</a>
+                            <a onclick="Show('add')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="addLink" class="nav-link" href="#">Add new</a>
+                            <a class="nav-link">|</a>
+                            <a onclick="Show('contact')" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" id="contactLink" class="nav-link" href="#">Contact</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <!-- #endregion -->
 
-        <!--Datetime-->
+        </header>
+
         <br><br><p class="text-end" id="myDate"></p>
 
-        <!--List of books-->
+        <!-- #region ListOfBooks -->
         <div id="listPage" class="d-block">
             <h2>All awesome books</h2>
-            <!--content generated with js TABLE-->
             <table class="table border" id="booksTable">
-               
             </table>
         </div>
+        <!-- #endregion -->
 
-        <!--Form to add book-->
+        <!-- #region AddBookForm -->
         <div id="addPage" class="d-none">
             <h2>Add a book</h2>
             
-            <form name="saveBook" id="saveBook">
+            <form onsubmit="AddBookM(event)" method="POST" name="saveBook" id="saveBook">
                 <label for="title"></label>
-                <input type="text" name="title" id="title" placeholder="title">
+                <input type="text" name="title" id="title" placeholder="title" required pattern="(?=.*[a-zA-Z])(?=.*[a-zA-Z0-9]).{4,}" title="Please don't use only numbers">
                 <label for="author"></label>
-                <input type="text" name="title" id="author" placeholder="author">
+                <input type="text" name="title" id="author" placeholder="author" required pattern="(?=.*[a-zA-Z])(?=.*[a-zA-Z0-9]).{4,}" title="Please don't use only numbers">
 
                 <div class="btn">
-                    <button class="btn shadow" type="button" onclick="AddBookM()" id="add">+ Add</button>
+                    <button class="btn shadow" type="submit" id="add">+ Add</button>
                 </div>
             
             </form>
 
         </div>
+        <!-- #endregion -->
 
-        <!--Contact div-->
-        <div id="contactPage" class="d-none">
+        <!-- #region ContactPage -->
+        <div id="contactPage" class="contactM d-none">
             <h2>Contact information</h2>
             <p>Do have any questions or ou just want to say "Hello"?</p>
+            <p>You can reach out to us!</p>
             <ul>
                 <li>Our e-mail: wikitelmex@gmail.com</li>
                 <li>Our phone number: 625 584 5675</li>
                 <li>Our address: Streetname 22, 84503 City, Country</li>
             </ul>
         </div>
+        <!-- #endregion -->
 
         <hr>
-        
+
+        <!-- #region Footer -->
+        <footer class="d-flex justify-content-around border fixed-bottom pt-3 bg-dark text-light">
+            <div>
+                <p><b>AlexDev</b> 2021. All rights reserved</p>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/alex.wikitelmex/" class="text-light"><i class="bi bi-facebook m-2"></i></a>
+                <a href="https://github.com/Wikitelmex" class="text-light"><i class="bi bi-github"></i></a>
+            </div>
+        </footer>
+        <!-- #endregion -->
         <script src="./script/array.js"></script>
         <script src="./script/localstorageactions.js"></script>
         <script src="./script/domtable.js"></script>
