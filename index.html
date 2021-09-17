@@ -56,9 +56,9 @@
             
             <form onsubmit="AddBookM(event)" method="POST" name="saveBook" id="saveBook">
                 <label for="title"></label>
-                <input type="text" name="title" id="title" placeholder="title" required pattern="(?=.*[a-zA-Z])(?=.*[a-zA-Z0-9]).{4,}" title="Please don't use only numbers">
+                <input type="text" name="title" id="title" placeholder="title" required pattern="(?=.*[a-zA-Z])(?=.*[a-zA-Z0-9]).{4,}" title="Please don't use only numbers, and minimun lenght of 4">
                 <label for="author"></label>
-                <input type="text" name="title" id="author" placeholder="author" required pattern="(?=.*[a-zA-Z])(?=.*[a-zA-Z0-9]).{4,}" title="Please don't use only numbers">
+                <input type="text" name="title" id="author" placeholder="author" required pattern="(?=.*[a-zA-Z])(?=.*[a-zA-Z0-9]).{4,}" title="Please don't use only numbers, and minimun lenght of 4">
 
                 <div class="btn">
                     <button class="btn shadow" type="submit" id="add">+ Add</button>
